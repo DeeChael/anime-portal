@@ -69,11 +69,11 @@ export default {
         },
         {
           id: 1001007,
-          name: 'PRTS.Map',
+          name: '明日方舟少人 Wiki',
           icon: 'hypergryph/arknights/extremely_few_people',
           description: '一个热爱明日方舟少人玩法的玩家社群所建立的收集明日方舟优秀作战纪录的网站',
           tags: ['配队', '攻略', '抄作业'],
-          link: 'extremely_few_people'
+          link: 'https://wiki.arkrec.com'
         }
       ]
     },
