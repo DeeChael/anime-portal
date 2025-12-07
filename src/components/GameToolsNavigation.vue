@@ -33,7 +33,7 @@
     <main>
       <div class="companies-container">
         <p>*除米哈游、散爆以外其他所有公司的 slogan 我都没找到明确出处，为 DeepSeek 搜索结果，不保证真实性。</p>
-        <img src="/slogan.png" alt="Slogan DeepSeek Response" width="777" />
+        <img src="/slogan.png" alt="Slogan DeepSeek Response" width="auto" style="max-width: 777px" />
         <div
             v-for="company in companies"
             :key="company.id"
