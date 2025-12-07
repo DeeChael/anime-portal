@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig({
-  base: import.meta.env.PROD ? '/anime-portal/' : '/',
+  base: import.meta.env.MODE === 'production' ? '/anime-portal/' : '/',
   plugins: [
     vue(),
     vueDevTools(),
