@@ -2,31 +2,31 @@
   <div class="game-navigator" :class="theme">
     <header>
       <div class="header-content-wrapper">
-        <img :src="viteConfig().base + `icons/anime_portal.png`" alt="二游工具导航" class="site-icon-img" />
+        <img src="/anime-portal/icons/anime_portal.png" alt="二游工具导航" class="site-icon-img" />
         <h1>二游工具导航</h1>
       </div>
       <div class="header-actions">
-      <button
-          @click="toggleTheme"
-          class="theme-btn"
-          :title="theme === 'latte' ? '切换到深色主题' : '切换到浅色主题'"
-      >
-        {{ theme === 'latte' ? '🌙' : '☀️' }}
-      </button>
+        <button
+            @click="toggleTheme"
+            class="theme-btn"
+            :title="theme === 'latte' ? '切换到深色主题' : '切换到浅色主题'"
+        >
+          {{ theme === 'latte' ? '🌙' : '☀️' }}
+        </button>
 
-      <a
-          href="https://github.com/DeeChael/anime-portal"
-          target="_blank"
-          class="theme-btn github-link"
-          title="GitHub"
-      >
-        <img
-            :src="getGithubIcon(theme)"
-            alt="Github"
-            class="github-icon"
-        />
-      </a>
-    </div>
+        <a
+            href="https://github.com/DeeChael/anime-portal"
+            target="_blank"
+            class="theme-btn github-link"
+            title="GitHub"
+        >
+          <img
+              :src="getGithubIcon(theme)"
+              alt="Github"
+              class="github-icon"
+          />
+        </a>
+      </div>
     </header>
 
     <main>
@@ -47,10 +47,10 @@
             />
             <div class="company-text-info">
               <a v-if="company.website"
-                :href="company.website"
-                target="_blank"
-                class="company-name-link"
-                :title="`前往 ${company.name} 官网`"
+                 :href="company.website"
+                 target="_blank"
+                 class="company-name-link"
+                 :title="`前往 ${company.name} 官网`"
               >
                 <h2>{{ company.name }}</h2>
               </a>
@@ -128,42 +128,42 @@
                         </div>
                       </div>
                     </a>
-<!--                    <div
-                        v-else
-                        v-for="tool in game.tools"
-                        :key="tool.id"
-                        class="tool-card"
-                    >
-                      <div class="tool-icon-container">
-                        <img
-                            :src="getIconPath(tool.icon)"
-                            :alt="tool.name"
-                            class="tool-icon"
-                            @error="handleImageError"
-                        />
-                      </div>
-                      <div class="tool-info">
-                        <h4>{{ tool.name }}</h4>
-                        <p class="tool-description">{{ tool.description }}</p>
-                        <div class="tool-tags">
-                          <span
-                              v-for="tag in tool.tags"
-                              :key="tag"
-                              class="tool-tag"
-                          >
-                            {{ tag }}
-                          </span>
-                        </div>
-                      </div>
-                      <a
-                          :href="tool.link"
-                          target="_blank"
-                          class="tool-link"
-                          title="打开工具"
-                      >
-                        ↗
-                      </a>
-                    </div>-->
+                    <!--                    <div
+                                            v-else
+                                            v-for="tool in game.tools"
+                                            :key="tool.id"
+                                            class="tool-card"
+                                        >
+                                          <div class="tool-icon-container">
+                                            <img
+                                                :src="getIconPath(tool.icon)"
+                                                :alt="tool.name"
+                                                class="tool-icon"
+                                                @error="handleImageError"
+                                            />
+                                          </div>
+                                          <div class="tool-info">
+                                            <h4>{{ tool.name }}</h4>
+                                            <p class="tool-description">{{ tool.description }}</p>
+                                            <div class="tool-tags">
+                                              <span
+                                                  v-for="tag in tool.tags"
+                                                  :key="tag"
+                                                  class="tool-tag"
+                                              >
+                                                {{ tag }}
+                                              </span>
+                                            </div>
+                                          </div>
+                                          <a
+                                              :href="tool.link"
+                                              target="_blank"
+                                              class="tool-link"
+                                              title="打开工具"
+                                          >
+                                            ↗
+                                          </a>
+                                        </div>-->
                   </div>
                 </div>
               </transition>
@@ -195,7 +195,6 @@ import KuroGames from "@/companies/KuroGames.vue";
 import BluePoch from "@/companies/BluePoch.vue";
 import SunBornGame from "@/companies/SunBornGame.vue";
 import Others from "@/companies/Others.vue";
-import viteConfig from "../../vite.config.js";
 
 export default {
   name: 'GameNavigator',
@@ -225,9 +224,6 @@ export default {
     }
   },
   methods: {
-    viteConfig() {
-      return viteConfig
-    },
     toggleTheme() {
       this.theme = this.theme === 'latte' ? 'mocha' : 'latte';
     },
@@ -245,13 +241,13 @@ export default {
       return game.tools.length;
     },
     getIconPath(name) {
-      return this.viteConfig().base + `icons/${name}.png`;
+      return `/anime-portal/icons/${name}.png`;
     },
     getGithubIcon(theme) {
       if (theme === 'latte') {
-        return this.viteConfig().base + `icons/github-mark.png`
+        return `/anime-portal/icons/github-mark.png`
       } else {
-        return this.viteConfig().base + `icons/github-mark-white.png`
+        return `/anime-portal/icons/github-mark-white.png`
       }
     },
     handleImageError(event) {
@@ -471,11 +467,11 @@ h1 {
 }
 
 .company-text-info {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   gap: 2px;
- }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
 
 .company-header h2 {
   font-size: 1.6rem;
