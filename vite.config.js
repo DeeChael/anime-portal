@@ -1,10 +1,15 @@
 import { fileURLToPath, URL } from 'node:url'
+import { builtinModules } from 'module';
+
+const allExternal = [
+  ...builtinModules,
+  ...builtinModules.map((m) => `node:${m}`)
+]
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://vite.dev/config/
 export default defineConfig({
   base: '/anime-portal/',
   plugins: [
@@ -16,4 +21,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  build: {
+    rollupOptions: {
+      external: ['fsevents', ...allExternal]
+    }
+  }
 })
