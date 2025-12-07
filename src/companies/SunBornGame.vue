@@ -1,7 +1,7 @@
 <script>
 export default {
   id: 5000000,
-  name: '散爆（SunBornGame）',
+  name: '散爆',
   slogan: '相信行动胜于语言，作品自由其力量',
   enName: 'SunBornGame',
   website: 'https://www.bluepoch.com',

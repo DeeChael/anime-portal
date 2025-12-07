@@ -1,7 +1,7 @@
 <script>
 export default {
   id: 4000000,
-  name: '深蓝互动（BluePoch）',
+  name: '深蓝互动',
   slogan: '游戏艺术如宇宙星空，你我的灵光，将闪耀其中。',
   enName: 'BluePoch',
   website: 'https://www.bluepoch.com',

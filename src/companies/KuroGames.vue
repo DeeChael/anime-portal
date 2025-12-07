@@ -1,7 +1,7 @@
 <script>
 export default {
   id: 3000000,
-  name: '库洛（Kuro Games）',
+  name: '库洛',
   slogan: '“挑战即伟大”',
   enName: 'KuroGames',
   website: 'https://www.kurogames.com',

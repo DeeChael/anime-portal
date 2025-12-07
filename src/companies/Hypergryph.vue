@@ -1,7 +1,7 @@
 <script>
 export default {
   id: 1000000,
-  name: '鹰角网络（HyperGryph/GryphLine）',
+  name: '鹰角网络',
   slogan: '致力于构建独一无二的世界',
   enName: 'Hypergryph',
   website: 'https://www.hypergryph.com',
@@ -16,8 +16,8 @@ export default {
           name: '明日方舟一图流',
           icon: 'hypergryph/arknights/yituliu',
           description: '明日方舟材料价值计算、性价比计算，以及攒抽计算等其它小工具。',
-          tags: ['刷图推荐', '材料价值', '商店性价比', '礼包性价比', '攒抽计算', 'box分析', '大数据统计'],
-          link: 'https://example.com/arknights-tool'
+          tags: ['材料价值', '商店性价比', '礼包性价比', '攒抽计算'],
+          link: 'https://ark.yituliu.cn'
         },
         {
           id: 1001002,

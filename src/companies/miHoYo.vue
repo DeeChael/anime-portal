@@ -1,7 +1,7 @@
 <script>
 export default {
   id: 2000000,
-  name: '米哈游（miHoYo/HoYoVerse）',
+  name: '米哈游',
   slogan: '技术宅拯救世界',
   enName: 'miHoYo',
   website: 'https://www.mihoyo.com',

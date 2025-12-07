@@ -17,7 +17,7 @@
 <script>
 export default {
     id: 1000000, // 公司 ID，七位数，只允许变更百万位到亿位的数字，即最多定义 1000 个公司，最后一个公司的 ID 为 999000000
-    name: '鹰角网络（HyperGryph/GryphLine）', // 在网页中显示的名称，先写中文名，括号内写英文名，如果海外运营公司的名称与国内运营有区别同时都要写
+    name: '鹰角网络', // 在网页中显示的名称
     slogan: '致力于构建独一无二的世界', // 公司的 slogan，可选，如果没有则留空或直接不填
     enName: 'Hypergryph', // 公司的英文名，一定要和 Logo 的命名一样，用于显示图标
     website: 'https://www.hypergryph.com', // 公司的官网
