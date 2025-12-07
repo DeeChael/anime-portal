@@ -3,7 +3,7 @@
   <div class="game-navigator" :class="theme">
     <header>
       <div class="header-content-wrapper">
-        <img :src="viteConfig().base + `icons/anime_portal.png`" alt="二游工具导航" class="site-icon-img" />
+        <img src="/icons/anime_portal.png" alt="二游工具导航" class="site-icon-img" />
         <h1>二游工具导航</h1>
       </div>
       <div class="header-actions">
@@ -196,7 +196,6 @@ import KuroGames from "@/companies/KuroGames.vue";
 import BluePoch from "@/companies/BluePoch.vue";
 import SunBornGame from "@/companies/SunBornGame.vue";
 import Others from "@/companies/Others.vue";
-import viteConfig from "../../vite.config.js";
 
 export default {
   name: 'GameNavigator',
@@ -226,9 +225,6 @@ export default {
     }
   },
   methods: {
-    viteConfig() {
-      return viteConfig
-    },
     toggleTheme() {
       this.theme = this.theme === 'latte' ? 'mocha' : 'latte';
     },
@@ -246,13 +242,13 @@ export default {
       return game.tools.length;
     },
     getIconPath(name) {
-      return this.viteConfig().base + `icons/${name}.png`;
+      return `/icons/${name}.png`;
     },
     getGithubIcon(theme) {
       if (theme === 'latte') {
-        return this.viteConfig().base + `icons/github-mark.png`
+        return `/icons/github-mark.png`
       } else {
-        return this.viteConfig().base + `icons/github-mark-white.png`
+        return `/icons/github-mark-white.png`
       }
     },
     handleImageError(event) {
