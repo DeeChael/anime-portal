@@ -54,7 +54,7 @@ export default {
         {
           id: 1001006,
           name: 'B 站 Wiki',
-          icon: 'bili_wiki',
+          icon: 'bili_game',
           description: 'Bilibili 明日方舟 Wiki',
           tags: ['Wiki', '百科'],
           link: 'https://wiki.biligame.com/arknights'
