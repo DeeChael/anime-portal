@@ -49,6 +49,14 @@ export default {
           description: '生成角色数据卡片',
           tags: ['数据展示'],
           link: 'https://wuwaflex.com'
+        },
+        {
+          id: 3001003,
+          name: 'ok-ww',
+          icon: 'kurogames/wuthering_waves/ok_ww',
+          description: '一个基于图像识别的鸣潮自动化程序，支持后台运行，基于 ok-script 开发。',
+          tags: ['自动化', '<red>违反用户协议'],
+          link: 'https://github.com/ok-oldking/ok-wuthering-waves'
         }
       ]
     }

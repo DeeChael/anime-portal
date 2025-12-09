@@ -122,49 +122,13 @@
                           <span
                               v-for="tag in tool.tags"
                               :key="tag"
-                              class="tool-tag"
+                              :class="getToolClass(tag)"
                           >
-                            {{ tag }}
+                            {{ getToolText(tag) }}
                           </span>
                         </div>
                       </div>
                     </a>
-                    <!--                    <div
-                                            v-else
-                                            v-for="tool in game.tools"
-                                            :key="tool.id"
-                                            class="tool-card"
-                                        >
-                                          <div class="tool-icon-container">
-                                            <img
-                                                :src="getIconPath(tool.icon)"
-                                                :alt="tool.name"
-                                                class="tool-icon"
-                                                @error="handleImageError"
-                                            />
-                                          </div>
-                                          <div class="tool-info">
-                                            <h4>{{ tool.name }}</h4>
-                                            <p class="tool-description">{{ tool.description }}</p>
-                                            <div class="tool-tags">
-                                              <span
-                                                  v-for="tag in tool.tags"
-                                                  :key="tag"
-                                                  class="tool-tag"
-                                              >
-                                                {{ tag }}
-                                              </span>
-                                            </div>
-                                          </div>
-                                          <a
-                                              :href="tool.link"
-                                              target="_blank"
-                                              class="tool-link"
-                                              title="打开工具"
-                                          >
-                                            ↗
-                                          </a>
-                                        </div>-->
                   </div>
                 </div>
               </transition>
@@ -240,6 +204,20 @@ export default {
     },
     getToolCount(game) {
       return game.tools.length;
+    },
+    getToolText(tag) {
+      return tag.startsWith('<red>') ? tag.slice(5) : tag
+    },
+    getToolClass(tag) {
+      if (tag.length < 5) {
+        return 'tool-tag'
+      }
+      switch (tag.substring(0, 5)) {
+        case '<red>':
+          return 'tool-tag-red'
+        default:
+          return 'tool-tag'
+      }
     },
     getIconPath(name) {
       return `/icons/${name}.png`;
@@ -646,6 +624,14 @@ h1 {
 .tool-tag {
   background: var(--surface1);
   color: var(--subtext0);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.tool-tag-red {
+  background: var(--red);
+  color: #ffffff;
   padding: 4px 10px;
   border-radius: 20px;
   font-size: 0.8rem;

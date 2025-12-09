@@ -8,9 +8,18 @@ export default {
   games: [
     {
       id: 4001000,
-      name: '重返未来：1999（Reverse 1999）',
+      name: '重返未来：1999（Reverse: 1999）',
       enName: 'Reverse1999',
-      tools: []
+      tools: [
+        {
+          id: 4001001,
+          name: 'M9A',
+          icon: 'bluepoch/reverse1999/m9a',
+          description: '重返未来：1999 小助手',
+          tags: ['自动化'],
+          link: 'https://1999.fan'
+        }
+      ]
     }
   ]
 }

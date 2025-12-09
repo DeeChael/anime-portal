@@ -13,10 +13,10 @@ export default {
       tools: [
         {
           id: 2001001,
-          name: 'MAA 助手',
+          name: '识宝小助手',
           icon: 'mihoyo/honkai_impact_3rd/maa',
           description: '基于MAA框架制作的崩坏三小助手。图像技术 + 模拟控制，解放双手！',
-          tags: ['清日常', '自动战斗'],
+          tags: ['清日常', '自动战斗', "<red>封号风险"],
           link: 'https://github.com/miaojiuqing/Maa_bbb'
         },
         {
@@ -24,7 +24,7 @@ export default {
           name: 'Honkai Helper',
           icon: '',
           description: '基于图色识别和OCR的PC端崩坏3自动化脚本，先别退坑，刷刷日常凑登录天数吧~',
-          tags: ['自动化', '可配置'],
+          tags: ['自动化', '可配置', "<red>封号风险"],
           link: 'https://github.com/Aues6uen11Z/HonkaiHelper'
         }
       ]
@@ -63,7 +63,7 @@ export default {
           name: 'BetterGI · 更好的原神',
           icon: 'mihoyo/genshin_impact/bettergi',
           description: '一个开源且免费，基于计算机视觉技术，意图让原神变的更好的项目',
-          tags: ['自动化', '清日常'],
+          tags: ['自动化', '清日常', "<red>封号风险"],
           link: 'https://bettergi.com'
         },
         {
@@ -105,6 +105,14 @@ export default {
           description: 'DPS 模拟与配队模拟工具',
           tags: ['配队工具', 'DPS 计算'],
           link: 'https://gcsim.app'
+        },
+        {
+          id: 3001003,
+          name: 'OK-GI',
+          icon: 'mihoyo/genshin_impact/ok_gi',
+          description: '原神 OKGI 自动拾取 | 后台自动剧情 | 后台一条龙 | UI Automation Genshin Impact',
+          tags: ['自动化', '<red>封号风险'],
+          link: 'https://github.com/ok-oldking/ok-genshin-impact'
         }
       ]
     },
@@ -134,7 +142,7 @@ export default {
           name: '三月七小助手',
           icon: 'mihoyo/honkai_star_rail/march7th_assistant',
           description: '崩坏：星穹铁道全自动 三月七小助手',
-          tags: ['清体力', '锄大地'],
+          tags: ['清体力', '锄大地', "<red>封号风险"],
           link: 'https://m7a.top/'
         },
         {
@@ -144,6 +152,14 @@ export default {
           description: '角色练度展示卡片、DPS 分析',
           tags: ['DPS 计算'],
           link: 'https://fribbels.github.io/hsr-optimizer'
+        },
+        {
+          id: 2003005,
+          name: 'Star Rail Assistant',
+          icon: 'mihoyo/honkai_star_rail/sra',
+          description: '一个基于图像识别的崩铁自动化程序，帮您完成从启动到退出的崩铁日常。',
+          tags: ['自动化', '清体力', "<red>封号风险"],
+          link: 'https://starrailassistant.top'
         }
       ]
     },
@@ -159,6 +175,14 @@ export default {
           description: '官方 Wiki',
           tags: ["Wiki", "百科"],
           link: 'https://baike.mihoyo.com/zzz/wiki/'
+        },
+        {
+          id: 2004002,
+          name: '一条龙',
+          icon: 'mihoyo/zenless_zone_zero/one_dragon',
+          description: '一条龙 | 全自动 | 自动闪避 | 自动每日 | 自动空洞 | 支持手柄',
+          tags: ["自动化", "<red>封号风险"],
+          link: 'https://one-dragon.com/zzz/zh/home.html'
         }
       ]
     }
